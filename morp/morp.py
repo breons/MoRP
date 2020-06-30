@@ -78,7 +78,7 @@ class MORP():
         sample_scaler = sample_scaler_log.apply(np.exp)
         gene_names = counts.index
         sample_names = counts.columns
-        sample_scaler_matrix = pd.np.tile(sample_scaler, (len(counts.index), 1))
+        sample_scaler_matrix = np.tile(sample_scaler, (len(counts.index), 1))
         
         # Step 7, divide each read count per sample in the raw matrix!
         counts_normalised = counts.copy().values
